@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Naima Pastries</title>
+</head>
+<body>
+    <section class="sec">
+        <header>
+            <a href="#"><img src="./images/logo.png" class="logo"></a>
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">Products</a></li>
+                <li><a href="#">What's New</a></li>
+                <li><a href="#">About Us</a></li>
+                <li><a href="#">Contact</a></li>
+            </ul>
+        </header>
+        <div class="content">
+            <div class="textBox">
+                <h2>You can have your cake<br><span>and eat it</span></h2>
+                <p>
+                    A special day ends with something sweet, a cake. Buy a cake for yourself or send it as a gift for a special occasion. Choose from our wide variety of mouthwatering cakes and get it delivered to your doorstep
+                </p>
+                <a href="#">View Our Products</a>
+            </div>
+            <div class="imgBox">
+                <img src="./images/cake1.jpg" class="cake">
+            </div>
+        </div>
+        <ul class="thumb">
+            <li><img src="./images/cake1.jpg" onclick="imgSlider('./images/cake1.jpg'); changeBgColor('#A1597E')"> </li>
+            <li>  <img src="./images/cake2.jpg" onclick="imgSlider('./images/cake2.jpg'); changeBgColor('#006B96')"> </li>
+            <li> <img src="./images/cake3.jpg" onclick="imgSlider('./images/cake3.jpg'); changeBgColor('#520E1B')"> </li>
+        </ul>
+        <ul class="sci">
+            <li><a href="#"><img src="./images/facebook.png" ></a></li>
+            <li><a href="#"><img src="./images/instagram.png"></a></li>
+            <li><a href="#"><img src="./images/twitter.png" ></a></li>
+        </ul>
+    </section>
+    <script type="text/javascript">
+        function imgSlider(anything) {
+            document.querySelector('.cake').src = anything;
+        }
+        function changeBgColor(color){
+            const sec = document.querySelector('.sec');
+            sec.style.background = color;
+        }
+    </script>
+</body>
+</html>
